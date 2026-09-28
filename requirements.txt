@@ -1,0 +1,9 @@
+# Lane Detector - Dependencies
+# Python 3.9+ recommended
+
+# Core Computer Vision & Numerical Computing
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# Optional visualization and analysis tools
+matplotlib>=3.7.0
