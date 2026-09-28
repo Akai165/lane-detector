@@ -35,7 +35,19 @@ dist/
 # Logs & temp files
 *.log
 
-# media files
-media/
-demo.png 
-test.mp4 
+# Video files (heavy test videos are ignored to keep the repo lightweight)
+*.mp4
+*.avi
+*.mov
+*.mkv
+media/*.mp4
+media/*.avi
+media/*.mov
+media/*.mkv
+
+# Allow demo screenshots and images in media for README
+!media/*.png
+!media/*.jpg
+!media/*.jpeg
+!media/*.gif
+!media/.gitkeep

@@ -59,7 +59,7 @@ flowchart LR
 
 ### 1. Clona il repository
 ```bash
-git clone https://github.com/tuo-username/lane-detector.git
+git clone https://github.com/Akai165/lane-detector.git
 cd lane-detector
 ```
 
