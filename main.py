@@ -1,4 +1,5 @@
 import os
+import sys
 import cv2
 import numpy as np
 
@@ -157,7 +158,7 @@ def bird_eye_view(binary_img, M):
 
 
 # --- Loop Video Principale ---
-cap = cv2.VideoCapture("./media/project_video.mp4")
+cap = cv2.VideoCapture("./media/test.mp4")
 if not cap.isOpened():
     print("Errore: impossibile aprire il file video.")
     exit()
@@ -171,7 +172,12 @@ if not ret:
 h, w = frame.shape[:2]
 M, Minv, src, dst = get_perspective_transform_matrice(w, h)
 
-HAS_DISPLAY = bool(os.environ.get("DISPLAY") or os.environ.get("WAYLAND_DISPLAY"))
+if sys.platform in ("darwin", "win32"):
+    # Controllo display per macchine non Linux (MacOS & Windows)
+    HAS_DISPLAY = True
+else:
+    # Linux: controlla X11 o Wayland; headless (WSL senza Xserver, server SSH) non ha nulla
+    HAS_DISPLAY = bool(os.environ.get("DISPLAY") or os.environ.get("WAYLAND_DISPLAY"))
 OUTPUT_PATH = "./media/output.mp4"
 out = None
 
