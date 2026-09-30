@@ -18,14 +18,11 @@ ROI adattiva con stima del punto di fuga · Bird's Eye View · HUD con minimappa
 
 <div align="center">
 
-https://github.com/user-attachments/assets/output.mp4
+![Lane Detection Demo](media/demo.gif)
 
-> *Frame originale con ROI dinamica (verde) e minimappa Bird's Eye View sovrapposta in alto a destra.*
+*ROI dinamica (verde) che segue il punto di fuga · minimappa Bird's Eye View in alto a destra*
 
 </div>
-
-> [!NOTE]
-> Se il video non viene riprodotto direttamente su GitHub, clona il repository e apri `media/output.mp4` localmente.
 
 ---
 
